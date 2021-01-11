@@ -88,13 +88,9 @@ export default function Home() {
       <Head>
         <title>Rebuilding Allbirds</title>
       </Head>
-      <div className="px-4 py-1 bg-lime-800 text-white">
-        <p className="text-xs font-medium text-center">
-          We're raising prices on all products by $1 today in support of the
-          planet.{" "}
-          <a href="#" className="underline">
-            Learn More.
-          </a>
+      <div className="px-4 py-3 bg-gray-500 text-white">
+        <p className="text-xs font-semibold text-center">
+          Gift with confidence. Returns are extended till Junuary 15th.
         </p>
       </div>
       <header className="sticky top-0 z-10 px-5 py-3 flex items-center justify-between bg-white">
@@ -150,7 +146,7 @@ export default function Home() {
         <div>
           <div className="flex items-center justify-between px-8 pt-4 pb-3">
             <div className="">
-              <div className="text-xs font-medium text-gray-900 space-x-1">
+              <div className="text-xs font-semibold text-gray-900 space-x-1">
                 <a href="#" className="underline">
                   Home
                 </a>
@@ -179,66 +175,23 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <div className="bg-gray-100 py-3 overflow-x-auto scrollbars-hidden">
+          <div className="bg-gray-100 py-2 overflow-x-auto scrollbars-hidden">
             <div className="px-8 text-sm inline-flex space-x-5">
               {categories.map((category) => (
-                <a href="#" className="text-gray-800 whitespace-nowrap">
+                <a href="#" className="font-medium text-gray-800 whitespace-nowrap">
                   {category}
                 </a>
               ))}
             </div>
           </div>
         </div>
-        <div className="py-8">
-          <div className="flex items-center space-x-4 bg-green-700 bg-opacity-20 px-8 py-3">
-            <div>
-              <svg
-                className="-ml-2 transform -rotate-12 h-14 w-14"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={0.5}
-                  d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
-                />
-              </svg>
-            </div>
-            <div>
-              <div className="flex space-x-2">
-                <h2 className="text-sm font-medium text-gray-900">
-                  Pay It To The Planet
-                </h2>
-                <svg
-                  className="h-5 w-5"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-              </div>
-              <p className="mt-1 text-sm font-light text-gray-900 text-opacity-90">
-                Every Black Friday purchase supports Fridays For Future
-              </p>
-            </div>
-          </div>
-
-          <div className="py-12 px-8">
+        <div>
+          <div className="py-6 px-8">
             {products.map((product) => (
               <div>
                 <div>
-                  <h2 className="text-lg font-semibold">{product.name}</h2>
-                  <p className="text-sm text-gray-800">{product.description}</p>
+                  <h2 className="text-lg font-bold">{product.name}</h2>
+                  <p className="text-sm font-medium text-gray-800">{product.description}</p>
                 </div>
                 <div className="mt-4 shadow-lg">
                   <div className="shadow-lg">
@@ -247,17 +200,17 @@ export default function Home() {
                         <img src={product.styles[0].image} alt="" />
                       </div>
                       <div className="px-4 pt-3">
-                        <h3 className="text-sm font-semibold">
+                        <h3 className="text-sm font-bold">
                           {product.name}
                         </h3>
-                        <p className="mt-1 text-sm text-gray-800">
+                        <p className="mt-1 text-sm font-medium text-gray-800">
                           {product.styles[0].name}
                         </p>
                       </div>
                     </a>
 
                     <div className="mt-1 px-4 pb-4">
-                      <p className="text-sm text-gray-800">
+                      <p className="text-sm font-medium text-gray-800">
                         {product.styles[0].price}
                       </p>
                       <div className="mt-4 flex space-x-4">
@@ -284,7 +237,7 @@ export default function Home() {
                     </div>
                     <div className="border-t">
                       <button className="text-sm px-4 py-2 flex w-full justify-between">
-                        <span className="font-semibold">Quick Add</span>
+                        <span className="font-bold">Quick Add</span>
                         <span>
                           <svg
                             className="h-6 w-6"
