@@ -20,54 +20,63 @@ export default function Home() {
         {
           name: "Natural Gray (Cream Sole)",
           price: "$115",
+          colors: ["#585c60", "#e2e2da"],
           image:
-            "https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_265,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/OrbgtJiuAc7M1yL4KvQjw/1",
+            "https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/6zdZ6PC1jhCrgl1lilg7N8/2",
         },
         {
           name: "Savanna Night (Cream Sole)",
           price: "$115",
+          colors: ["#353946", "#e2e2da"],
           image:
-            "https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_265,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/OrbgtJiuAc7M1yL4KvQjw/1",
+            "https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/6zdZ6PC1jhCrgl1lilg7N8/2",
         },
         {
           name: "Black Sands (Asphalt Sole)",
           price: "$115",
+          colors: ["#28282c", "#434345"],
           image:
             "https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_265,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/OrbgtJiuAc7M1yL4KvQjw/1",
         },
         {
           name: "Cardamom (Cream Sole)",
           price: "$115",
+          colors: ["#9d957a", "#e2e2da"],
           image:
             "https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_265,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/OrbgtJiuAc7M1yL4KvQjw/1",
         },
         {
           name: "Ginseng (Beige Sole)",
           price: "$115",
+          colors: ["#e7e5e2", "#bfbab5"],
           image:
             "https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_265,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/OrbgtJiuAc7M1yL4KvQjw/1",
         },
         {
           name: "Dapple Gray (Cream Sole)",
           price: "$115",
+          colors: ["#585c60", "#e2e2da"],
           image:
             "https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_265,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/OrbgtJiuAc7M1yL4KvQjw/1",
         },
         {
           name: "Aurora (Cream)",
           price: "$115",
+          colors: ["#585c60", "#e2e2da"],
           image:
             "https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_265,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/OrbgtJiuAc7M1yL4KvQjw/1",
         },
         {
           name: "Pacific (Cream Sole)",
           price: "$115",
+          colors: ["#585c60", "#e2e2da"],
           image:
             "https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_265,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/OrbgtJiuAc7M1yL4KvQjw/1",
         },
         {
           name: "True Black (Black Sole)",
           price: "$115",
+          colors: ["#585c60", "#e2e2da"],
           image:
             "https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_265,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/OrbgtJiuAc7M1yL4KvQjw/1",
         },
@@ -88,7 +97,7 @@ export default function Home() {
           </a>
         </p>
       </div>
-      <header className="relative px-5 py-3 flex items-center justify-between bg-white">
+      <header className="sticky top-0 z-10 px-5 py-3 flex items-center justify-between bg-white">
         <div className="absolute inset-0 shadow-lg opacity-50"></div>
         <div className="flex">
           <button
@@ -224,24 +233,77 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="py-16 px-8">
+          <div className="py-12 px-8">
             {products.map((product) => (
               <div>
                 <div>
                   <h2 className="text-lg font-semibold">{product.name}</h2>
                   <p className="text-sm text-gray-800">{product.description}</p>
                 </div>
-                <div className="shadow-lg">
-                  <a href="#">
-                    <div>
-                      <img src={product.styles[0].image} alt="" />
+                <div className="mt-4 shadow-lg">
+                  <div className="shadow-lg">
+                    <a href="#">
+                      <div className="bg-gray-100">
+                        <img src={product.styles[0].image} alt="" />
+                      </div>
+                      <div className="px-4 pt-3">
+                        <h3 className="text-sm font-semibold">
+                          {product.name}
+                        </h3>
+                        <p className="mt-1 text-sm text-gray-800">
+                          {product.styles[0].name}
+                        </p>
+                      </div>
+                    </a>
+
+                    <div className="mt-1 px-4 pb-4">
+                      <p className="text-sm text-gray-800">
+                        {product.styles[0].price}
+                      </p>
+                      <div className="mt-4 flex space-x-4">
+                        {product.styles.slice(0, 6).map((style, i) => (
+                          <button
+                            className={`h-6 w-6 flex flex-col border border-gray-300 rounded-full overflow-hidden transform -rotate-45 ${
+                              i === 0
+                                ? "ring-2 ring-offset-1 ring-gray-300"
+                                : ""
+                            }`}
+                          >
+                            <span className="sr-only">{style.name}</span>
+                            <span
+                              className="h-3 w-6"
+                              style={{ backgroundColor: style.colors[0] }}
+                            ></span>
+                            <span
+                              className="h-3 w-6"
+                              style={{ backgroundColor: style.colors[1] }}
+                            ></span>
+                          </button>
+                        ))}
+                      </div>
                     </div>
-                    <div>
-                      <h3>{product.name}</h3>
-                      <p>{product.styles[0].name}</p>
-                      <p>{product.styles[0].price}</p>
+                    <div className="border-t">
+                      <button className="text-sm px-4 py-2 flex w-full justify-between">
+                        <span className="font-semibold">Quick Add</span>
+                        <span>
+                          <svg
+                            className="h-6 w-6"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                            />
+                          </svg>
+                        </span>
+                      </button>
                     </div>
-                  </a>
+                  </div>
                 </div>
               </div>
             ))}
